@@ -1,0 +1,492 @@
+/* ─────────────────────────────────────────
+   Learnalyntix — Register page styles
+   Register.css
+───────────────────────────────────────── */
+
+.rg-wrap {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 14px;
+  color: #1a1a1a;
+  background: #fff;
+}
+
+/* ── Left panel ── */
+.rg-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 56px;
+  background: #ffffff;
+  overflow-y: auto;
+}
+
+/* Logo */
+.rg-logo-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 28px;
+  align-self: flex-start;
+}
+
+.rg-logo-box {
+  width: 32px;
+  height: 32px;
+  background: #534AB7;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.rg-logo-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1a1a1a;
+  letter-spacing: -0.3px;
+}
+
+/* Form box */
+.rg-form-box {
+  width: 100%;
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+}
+
+.rg-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0 0 6px;
+  letter-spacing: -0.4px;
+}
+
+.rg-sub {
+  font-size: 13px;
+  color: #6b7280;
+  margin: 0 0 20px;
+}
+
+/* Step indicator */
+.rg-steps {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin-bottom: 22px;
+}
+
+.rg-step {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: #9ca3af;
+  font-weight: 500;
+}
+
+.rg-step.active {
+  color: #534AB7;
+}
+
+.rg-step-circle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1.5px solid #d1d5db;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 600;
+  color: #9ca3af;
+  background: #fff;
+  flex-shrink: 0;
+  transition: all 0.2s;
+}
+
+.rg-step.active .rg-step-circle {
+  border-color: #534AB7;
+  background: #534AB7;
+  color: #fff;
+}
+
+.rg-step-line {
+  flex: 1;
+  height: 1px;
+  background: #e5e7eb;
+  margin: 0 10px;
+}
+
+/* Fields */
+.rg-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.rg-field {
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.rg-field label {
+  font-size: 12px;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 5px;
+}
+
+.rg-field input,
+.rg-field select {
+  width: 100%;
+  height: 40px;
+  font-size: 13px;
+  padding: 0 12px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  background: #ffffff;
+  color: #1a1a1a;
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.rg-field input:focus,
+.rg-field select:focus {
+  border-color: #534AB7;
+  box-shadow: 0 0 0 3px rgba(83, 74, 183, 0.12);
+}
+
+.rg-field select:disabled {
+  background: #f9fafb;
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.rg-row {
+  display: flex;
+  gap: 10px;
+}
+
+.rg-row .rg-field {
+  flex: 1;
+}
+
+/* Error text */
+.rg-err {
+  font-size: 11px;
+  color: #A32D2D;
+  margin-top: 4px;
+}
+
+/* Password */
+.rg-pass-wrap {
+  position: relative;
+}
+
+.rg-pass-wrap input {
+  padding-right: 38px;
+}
+
+.rg-eye {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #9ca3af;
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+.rg-eye:hover {
+  color: #374151;
+}
+
+/* Review card */
+.rg-review-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #f3f4f6;
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin-bottom: 16px;
+}
+
+.rg-review-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #534AB7;
+  color: #EEEDFE;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.rg-review-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 2px;
+}
+
+.rg-review-meta {
+  font-size: 11px;
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+/* Buttons */
+.rg-submit-btn {
+  width: 100%;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 8px;
+  border-radius: 8px;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  background: #0F6E56;
+  color: #E1F5EE;
+  transition: background 0.15s;
+}
+
+.rg-submit-btn:hover {
+  background: #085041;
+}
+
+.rg-btn-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.rg-back-btn {
+  height: 42px;
+  padding: 0 18px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  background: #fff;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  color: #374151;
+  transition: background 0.12s;
+  flex-shrink: 0;
+}
+
+.rg-back-btn:hover {
+  background: #f9fafb;
+}
+
+.rg-submit-flex {
+  flex: 1;
+  width: auto;
+  margin-top: 0;
+}
+
+/* Sign in link */
+.rg-login-row {
+  text-align: center;
+  font-size: 12px;
+  color: #6b7280;
+  margin-top: 16px;
+}
+
+.rg-login-link {
+  color: #534AB7;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.rg-login-link:hover {
+  text-decoration: underline;
+}
+
+/* Copyright */
+.rg-copyright {
+  font-size: 11px;
+  color: #9ca3af;
+  margin-top: auto;
+  align-self: flex-start;
+  padding-top: 20px;
+}
+
+/* ── Success state ── */
+.rg-success-box {
+  width: 100%;
+  max-width: 340px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.rg-success-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #E1F5EE;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+}
+
+.rg-success-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0 0 8px;
+}
+
+.rg-success-sub {
+  font-size: 13px;
+  color: #6b7280;
+  line-height: 1.6;
+  margin: 0 0 24px;
+}
+
+.rg-success-sub strong {
+  color: #1a1a1a;
+}
+
+/* ── Right panel ── */
+.rg-right {
+  width: 40%;
+  min-width: 40%;
+  background: #534AB7;
+  display: flex;
+  flex-direction: column;
+  padding: 48px 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.rg-right::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: #7F77DD;
+  opacity: 0.25;
+  pointer-events: none;
+}
+
+.rg-right::after {
+  content: "";
+  position: absolute;
+  bottom: -80px;
+  left: -80px;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: #3C3489;
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.rg-right-content {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+}
+
+.rg-right-heading {
+  font-size: 22px;
+  font-weight: 600;
+  color: #EEEDFE;
+  line-height: 1.4;
+  margin: 0 0 12px;
+  letter-spacing: -0.3px;
+}
+
+.rg-right-sub {
+  font-size: 13px;
+  color: #AFA9EC;
+  line-height: 1.7;
+  margin: 0 0 32px;
+}
+
+/* Feature list */
+.rg-feature-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.rg-feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.rg-feature-icon {
+  font-size: 22px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.rg-feature-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: #EEEDFE;
+  margin-bottom: 3px;
+}
+
+.rg-feature-desc {
+  font-size: 12px;
+  color: #AFA9EC;
+  line-height: 1.5;
+}
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  .rg-wrap {
+    flex-direction: column;
+  }
+
+  .rg-right {
+    width: 100%;
+    min-width: unset;
+    padding: 28px 24px;
+  }
+
+  .rg-left {
+    padding: 28px 24px;
+  }
+
+  .rg-row {
+    flex-direction: column;
+    gap: 0;
+  }
+}

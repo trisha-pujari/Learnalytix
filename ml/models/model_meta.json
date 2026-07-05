@@ -1,0 +1,57 @@
+{
+  "features": [
+    "CGPA",
+    "Overall Att%",
+    "Backlogs",
+    "Internship_enc",
+    "Projects",
+    "Hackathons",
+    "Branch_enc",
+    "Year",
+    "S1 SGPA",
+    "S2 SGPA",
+    "S3 SGPA",
+    "S4 SGPA",
+    "Att S1%",
+    "Att S2%",
+    "Att S3%",
+    "Att S4%"
+  ],
+  "dropout": {
+    "type": "RandomForest",
+    "accuracy": 0.85,
+    "cv": 0.844,
+    "classes": [
+      "High",
+      "Low",
+      "Medium"
+    ]
+  },
+  "passfail": {
+    "type": "GradientBoosting",
+    "accuracy": 1.0,
+    "cv": 1.0,
+    "classes": [
+      "Fail",
+      "Pass"
+    ]
+  },
+  "feature_importances": {
+    "CGPA": 0.2202529060240176,
+    "Overall Att%": 0.11670715119334896,
+    "S1 SGPA": 0.11138825415226387,
+    "S2 SGPA": 0.10943736000796227,
+    "Att S2%": 0.08853582758783878,
+    "Backlogs": 0.07716346405786619,
+    "S4 SGPA": 0.0675906723247221,
+    "Att S1%": 0.04961117096698433,
+    "S3 SGPA": 0.04446012555730209,
+    "Att S3%": 0.03727508326145491,
+    "Att S4%": 0.028328293387587196,
+    "Branch_enc": 0.014444666117258533,
+    "Hackathons": 0.011209494830115003,
+    "Projects": 0.010336915824989626,
+    "Year": 0.008636851562775032,
+    "Internship_enc": 0.0046217631435133836
+  }
+}

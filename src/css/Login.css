@@ -1,0 +1,531 @@
+/* ─────────────────────────────────────────
+   Learnalyntix — Login page styles
+   Login.css
+───────────────────────────────────────── */
+
+/* Wrapper */
+.ll-wrap {
+  display: flex;
+  height: 100vh;
+  min-height: 600px;
+   
+  width: 100vw;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 14px;
+  color: #1a1a1a;
+  background: #fff;
+}
+
+/* ── Left panel ── */
+.ll-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 48px 56px;
+  background: #ffffff;
+}
+
+/* Logo */
+.ll-logo-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 36px;
+  align-self: flex-start;
+}
+
+.ll-logo-box {
+  width: 32px;
+  height: 32px;
+  background: #534AB7;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.ll-logo-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1a1a1a;
+  letter-spacing: -0.3px;
+}
+
+/* Form box */
+.ll-form-box {
+  width: 100%;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.ll-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0 0 6px;
+  letter-spacing: -0.4px;
+}
+
+.ll-sub {
+  font-size: 13px;
+  color: #6b7280;
+  margin: 0 0 28px;
+}
+
+/* Role toggle */
+.ll-role-row {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 22px;
+  background: #f3f4f6;
+  border-radius: 8px;
+  padding: 3px;
+}
+
+.ll-role-tab {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 7px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  color: #6b7280;
+  transition: all 0.15s;
+}
+
+.ll-role-tab.active {
+  background: #ffffff;
+  color: #1a1a1a;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Error */
+.ll-error {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: #791F1F;
+  background: #FCEBEB;
+  border: 0.5px solid #F09595;
+  border-radius: 8px;
+  padding: 8px 12px;
+  margin-bottom: 12px;
+}
+
+/* Fields */
+.ll-field {
+  margin-bottom: 14px;
+}
+
+.ll-field label {
+  display: block;
+  font-size: 12px;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 5px;
+}
+
+.ll-field input {
+  width: 100%;
+  height: 40px;
+  font-size: 13px;
+  padding: 0 12px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  background: #ffffff;
+  color: #1a1a1a;
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  box-sizing: border-box;
+}
+
+.ll-field input:focus {
+  border-color: #534AB7;
+  box-shadow: 0 0 0 3px rgba(83, 74, 183, 0.12);
+}
+
+.ll-field-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+/* Password */
+.ll-pass-wrap {
+  position: relative;
+}
+
+.ll-pass-wrap input {
+  padding-right: 38px;
+}
+
+.ll-eye {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #9ca3af;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  transition: color 0.12s;
+}
+
+.ll-eye:hover {
+  color: #374151;
+}
+
+/* Forgot */
+.ll-forgot {
+  font-size: 11px;
+  color: #534AB7;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font-family: inherit;
+}
+
+.ll-forgot:hover {
+  text-decoration: underline;
+}
+
+/* Remember me */
+.ll-remember {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: #6b7280;
+  cursor: pointer;
+  margin-bottom: 2px;
+}
+
+.ll-remember input[type="checkbox"] {
+  accent-color: #534AB7;
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+}
+
+/* Login button */
+.ll-login-btn {
+  width: 100%;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 14px;
+  border-radius: 8px;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  background: #534AB7;
+  color: #EEEDFE;
+  transition: background 0.15s, opacity 0.15s;
+}
+
+.ll-login-btn:hover {
+  background: #3C3489;
+}
+
+.ll-login-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.ll-login-btn.student {
+  background: #0F6E56;
+  color: #E1F5EE;
+}
+
+.ll-login-btn.student:hover {
+  background: #085041;
+}
+
+/* Divider */
+.ll-divider {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 18px 0;
+  color: #9ca3af;
+  font-size: 12px;
+}
+
+.ll-divider::before,
+.ll-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #e5e7eb;
+}
+
+/* Social buttons */
+.ll-social-row {
+  display: flex;
+  gap: 8px;
+}
+
+.ll-social-btn {
+  flex: 1;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: #ffffff;
+  font-size: 12px;
+  color: #374151;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.12s;
+}
+
+.ll-social-btn:hover {
+  background: #f9fafb;
+}
+
+/* Sign up row */
+.ll-signup-row {
+  text-align: center;
+  font-size: 12px;
+  color: #6b7280;
+  margin-top: 20px;
+}
+
+.ll-signup-link {
+  color: #534AB7;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.ll-signup-link:hover {
+  text-decoration: underline;
+}
+
+/* Copyright */
+.ll-copyright {
+  font-size: 11px;
+  color: #9ca3af;
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+/* ── Success state ── */
+.ll-success-box {
+  width: 100%;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 16px;
+}
+
+.ll-check-circle {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #EEEDFE;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+}
+
+.ll-check-circle.student {
+  background: #E1F5EE;
+}
+
+.ll-success-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0 0 6px;
+}
+
+.ll-success-sub {
+  font-size: 12px;
+  color: #6b7280;
+  margin: 0 0 24px;
+}
+
+.ll-reset-btn {
+  background: none;
+  border: none;
+  font-size: 12px;
+  color: #6b7280;
+  cursor: pointer;
+  margin-top: 14px;
+  font-family: inherit;
+}
+
+.ll-reset-btn:hover {
+  color: #374151;
+}
+
+/* ── Right panel ── */
+.ll-right {
+     /* width: 40%;
+  min-width: 40%; */
+  background: #534AB7;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 32px;
+  position: relative;
+  overflow: hidden;
+}
+
+.ll-right::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: #7F77DD;
+  opacity: 0.25;
+  pointer-events: none;
+}
+
+.ll-right::after {
+  content: "";
+  position: absolute;
+  bottom: -80px;
+  left: -80px;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: #3C3489;
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.ll-right-content {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+}
+
+.ll-right-heading {
+  font-size: 20px;
+  font-weight: 600;
+  color: #EEEDFE;
+  line-height: 1.4;
+  margin: 0 0 10px;
+  letter-spacing: -0.3px;
+}
+
+.ll-right-sub {
+  font-size: 12px;
+  color: #AFA9EC;
+  line-height: 1.7;
+  margin: 0 0 28px;
+}
+
+/* Preview card */
+.ll-preview-card {
+  background: rgba(255, 255, 255, 0.1);
+  border: 0.5px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 14px;
+  margin-bottom: 10px;
+}
+
+.ll-preview-label {
+  font-size: 10px;
+  color: #AFA9EC;
+  margin-bottom: 4px;
+}
+
+.ll-preview-val {
+  font-size: 18px;
+  font-weight: 600;
+  color: #EEEDFE;
+}
+
+.ll-mini-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
+  height: 36px;
+  margin-top: 8px;
+}
+
+.ll-mbar {
+  flex: 1;
+  border-radius: 2px 2px 0 0;
+  background: rgba(255, 255, 255, 0.3);
+  min-width: 8px;
+  transition: background 0.2s;
+}
+
+.ll-mbar.hi {
+  background: #EEEDFE;
+}
+
+/* Stats row */
+.ll-stats-row {
+  display: flex;
+  gap: 8px;
+}
+
+.ll-stat-mini {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.1);
+  border: 0.5px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.ll-stat-val {
+  font-size: 16px;
+  font-weight: 600;
+  color: #EEEDFE;
+}
+
+.ll-stat-label {
+  font-size: 10px;
+  color: #AFA9EC;
+  margin-top: 2px;
+  line-height: 1.3;
+}
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+   .ll-wrap {
+    flex-direction: column;
+  }
+
+  .ll-right {
+    width: 100%;
+    min-width: unset;
+    padding: 28px 24px;
+  }
+
+  .ll-left {
+    padding: 32px 24px;
+  }
+}

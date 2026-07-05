@@ -1,0 +1,75 @@
+/* src/App.css */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: #f4f4f9;
+  color: #1a1a2e;
+}
+
+/* ── Nav ─────────────────────────────────────────────────────────────── */
+
+.app-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1a1a2e;
+  padding: 0 2rem;
+  height: 56px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.nav-brand {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.02em;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: #c0c0e0;
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 500;
+  transition: color 0.15s;
+}
+
+.nav-links a:hover { color: #fff; }
+
+.nav-user {
+  font-size: 0.82rem;
+  color: #9090c0;
+}
+
+.nav-logout {
+  background: transparent;
+  border: 1px solid #5b5b8a;
+  color: #c0c0e0;
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.nav-logout:hover {
+  background: #5b5b8a;
+  color: #fff;
+}
+
+/* ── Main content ─────────────────────────────────────────────────────── */
+
+.app-main {
+  min-height: calc(100vh - 56px);
+  padding: 0;
+}

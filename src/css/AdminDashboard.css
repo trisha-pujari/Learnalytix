@@ -1,0 +1,272 @@
+/* src/css/AdminDashboard.css */
+
+.admin-dash {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.dash-loading {
+  text-align: center;
+  padding: 4rem;
+  color: #888;
+  font-size: 1rem;
+}
+
+/* ── Header ──────────────────────────────────────────────────────────── */
+
+.dash-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.75rem;
+}
+
+.dash-header h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin: 0 0 0.2rem;
+  color: #1a1a2e;
+}
+
+.dash-sub {
+  font-size: 0.88rem;
+  color: #888;
+  margin: 0;
+}
+
+.model-badge {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  background: #f0f0fa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 0.6rem 1rem;
+  font-size: 0.8rem;
+  color: #555;
+}
+
+.model-badge strong { color: #3d3d8f; }
+
+/* ── Stat Cards ──────────────────────────────────────────────────────── */
+
+.stat-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  background: #fff;
+  border: 1px solid #e8e8f0;
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 4px;
+}
+
+.stat-label {
+  font-size: 0.78rem;
+  color: #888;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* ── Bar Chart ───────────────────────────────────────────────────────── */
+
+.risk-chart {
+  background: #f9f9fc;
+  border: 1px solid #e8e8f0;
+  border-radius: 10px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.risk-chart h4 {
+  margin: 0 0 1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #5b5b8a;
+}
+
+.bars {
+  display: flex;
+  gap: 2.5rem;
+  align-items: flex-end;
+  height: 120px;
+}
+
+.bar-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  flex: 1;
+  max-width: 80px;
+  height: 100%;
+}
+
+.bar-outer {
+  flex: 1;
+  width: 100%;
+  background: #e8e8f0;
+  border-radius: 6px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.bar-inner {
+  width: 100%;
+  border-radius: 6px;
+  transition: height 0.6s ease;
+  min-height: 4px;
+}
+
+.bar-label {
+  font-size: 0.78rem;
+  color: #555;
+  font-weight: 500;
+}
+
+.bar-num {
+  font-size: 0.75rem;
+  color: #999;
+}
+
+/* ── Table Section ───────────────────────────────────────────────────── */
+
+.table-section {
+  background: #fff;
+  border: 1px solid #e8e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.table-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid #e8e8f0;
+}
+
+.search-box {
+  padding: 7px 12px;
+  border: 1px solid #d0d0e0;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  width: 220px;
+  outline: none;
+}
+
+.search-box:focus { border-color: #5b5b8a; }
+
+.filter-tabs {
+  display: flex;
+  gap: 4px;
+}
+
+.filter-tab {
+  padding: 5px 14px;
+  border: 1px solid #d0d0e0;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  background: #fff;
+  color: #555;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.filter-tab.active, .filter-tab:hover {
+  background: #3d3d8f;
+  color: #fff;
+  border-color: #3d3d8f;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+thead tr {
+  background: #f5f5fb;
+}
+
+th {
+  text-align: left;
+  padding: 10px 14px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #5b5b8a;
+  border-bottom: 1px solid #e8e8f0;
+  white-space: nowrap;
+}
+
+td {
+  padding: 10px 14px;
+  color: #333;
+  border-bottom: 1px solid #f0f0f8;
+}
+
+tr:last-child td { border-bottom: none; }
+tr:hover td { background: #fafafe; }
+
+.mono { font-family: monospace; font-size: 0.82rem; }
+
+/* ── Pills ────────────────────────────────────────────────────────────── */
+
+.risk-pill {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.pf-pill {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.pf-pill.pass { background: #eafaf1; color: #27ae60; }
+.pf-pill.fail { background: #fdf0ef; color: #e74c3c; }
+
+.no-data {
+  text-align: center;
+  padding: 2rem;
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+.more-note {
+  text-align: center;
+  padding: 0.75rem;
+  color: #aaa;
+  font-size: 0.8rem;
+  border-top: 1px solid #f0f0f8;
+}

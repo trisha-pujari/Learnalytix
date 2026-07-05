@@ -1,0 +1,260 @@
+/* src/css/StudentProfile.css */
+
+.sp-page {
+  padding: 1.5rem 2rem 4rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ── Loading / Error ── */
+.sp-loading, .sp-error {
+  display: flex; flex-direction: column; align-items: center;
+  justify-content: center; gap: 1rem; padding: 4rem 2rem;
+  color: #888; text-align: center;
+}
+.sp-spinner {
+  width: 36px; height: 36px;
+  border: 3px solid #e8e8f0;
+  border-top-color: #3d3d8f;
+  border-radius: 50%;
+  animation: sp-spin 0.8s linear infinite;
+}
+@keyframes sp-spin { to { transform: rotate(360deg); } }
+.sp-error { color: #e74c3c; }
+.sp-error button {
+  margin-top: 8px; padding: 8px 16px;
+  border: 1px solid #e5e4e7; border-radius: 8px;
+  background: #fff; cursor: pointer; color: #3d3d8f;
+}
+
+/* ── Back button ── */
+.sp-back {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: none; border: 1px solid #e5e4e7;
+  border-radius: 8px; padding: 6px 14px;
+  font-size: 0.83rem; color: #555; cursor: pointer;
+  margin-bottom: 1.25rem;
+  transition: all 0.12s;
+}
+.sp-back:hover { border-color: #3d3d8f; color: #3d3d8f; }
+
+/* ── Hero ── */
+.sp-hero {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  background: #fff;
+  border: 1px solid #e5e4e7;
+  border-radius: 14px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  border-left: 4px solid var(--risk-color, #3d3d8f);
+}
+.sp-avatar {
+  width: 60px; height: 60px;
+  border-radius: 50%;
+  background: #3d3d8f;
+  color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.2rem; font-weight: 700;
+  flex-shrink: 0;
+}
+.sp-hero-info { flex: 1; }
+.sp-hero-info h2 {
+  font-size: 1.35rem; font-weight: 700;
+  color: #08060d; margin: 0 0 4px;
+}
+.sp-meta {
+  font-size: 0.85rem; color: #888;
+  display: flex; align-items: center; gap: 6px; flex-wrap: wrap;
+}
+.sp-dot { color: #ccc; }
+
+.sp-risk-badge {
+  text-align: center;
+  border: 1px solid;
+  border-radius: 12px;
+  padding: 0.75rem 1.25rem;
+  display: flex; flex-direction: column; gap: 2px;
+  min-width: 130px;
+}
+.sp-risk-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.06em; opacity: 0.7; }
+.sp-risk-val { font-size: 1.3rem; font-weight: 700; }
+.sp-risk-conf { font-size: 0.75rem; opacity: 0.75; }
+
+/* ── Flags ── */
+.sp-flags {
+  display: flex; flex-wrap: wrap; gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+.sp-flag {
+  display: flex; align-items: center; gap: 6px;
+  padding: 6px 12px; border-radius: 8px; font-size: 0.82rem;
+}
+.sp-flag-icon { font-size: 0.9rem; }
+.sp-flag-high   { background: #fff0ef; color: #c0392b; }
+.sp-flag-medium { background: #fffbef; color: #d35400; }
+.sp-flag-low    { background: #f0f8ff; color: #2980b9; }
+
+/* ── Body layout ── */
+.sp-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  align-items: start;
+}
+.sp-col { display: flex; flex-direction: column; gap: 1rem; }
+
+/* ── Cards ── */
+.sp-card {
+  background: #fff;
+  border: 1px solid #e5e4e7;
+  border-radius: 14px;
+  padding: 1.25rem;
+}
+.sp-card h3 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #08060d;
+  margin: 0 0 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Gauges */
+.sp-gauges {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  margin-bottom: 1rem;
+}
+.sp-gauge-item {
+  display: flex; flex-direction: column; align-items: center; gap: 6px;
+  font-size: 0.78rem; color: #666;
+}
+
+/* KV grid */
+.sp-kv-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+.sp-kv {
+  display: flex; justify-content: space-between;
+  background: #f9f9fb; border-radius: 8px;
+  padding: 8px 12px; font-size: 0.82rem;
+}
+.sp-kv span { color: #888; }
+.sp-kv strong { color: #08060d; }
+.sp-kv strong.warn { color: #e74c3c; }
+
+/* ── Semester chart ── */
+.sp-sem-chart h4 { font-size: 0.9rem; font-weight: 600; color: #08060d; margin: 0 0 1rem; text-transform: uppercase; letter-spacing: 0.05em; }
+.sp-sem-bars {
+  display: flex; justify-content: space-around; align-items: flex-end;
+  height: 120px; gap: 8px;
+}
+.sp-sem-col {
+  display: flex; flex-direction: column; align-items: center; gap: 4px;
+  flex: 1;
+}
+.sp-sem-pair {
+  display: flex; align-items: flex-end; gap: 4px;
+  height: 100px;
+}
+.sp-bar-track {
+  width: 14px;
+  background: #f0f0f8;
+  border-radius: 4px 4px 0 0;
+  height: 100%;
+  display: flex; align-items: flex-end;
+}
+.sp-bar-fill {
+  width: 100%; border-radius: 4px 4px 0 0;
+  transition: height 0.5s ease;
+}
+.sp-bar-fill.sgpa { background: #3d3d8f; }
+.sp-bar-fill.att  { background: #27ae60; }
+
+.sp-sem-label { font-size: 0.72rem; color: #888; font-weight: 600; }
+.sp-sem-vals { display: flex; flex-direction: column; align-items: center; font-size: 0.65rem; }
+.sp-sgpa-val { color: #3d3d8f; }
+.sp-att-val  { color: #27ae60; }
+.sp-sem-legend {
+  display: flex; gap: 1rem; margin-top: 0.75rem;
+  font-size: 0.76rem; color: #666;
+}
+.sp-sem-legend span { display: flex; align-items: center; gap: 5px; }
+.legend-dot {
+  width: 10px; height: 10px; border-radius: 2px; display: inline-block;
+}
+.legend-dot.sgpa { background: #3d3d8f; }
+.legend-dot.att  { background: #27ae60; }
+
+/* ── Predictions card ── */
+.sp-pred-card {}
+.sp-pred-block {
+  background: #f9f9fb;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+}
+.sp-pred-block:last-child { margin-bottom: 0; }
+
+.sp-pred-header {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-bottom: 0.6rem; font-size: 0.83rem; font-weight: 600; color: #333;
+}
+.sp-pill {
+  display: inline-block; padding: 3px 10px; border-radius: 20px;
+  font-size: 0.78rem; font-weight: 600;
+}
+.sp-pf-pill {
+  display: inline-block; padding: 3px 10px; border-radius: 20px;
+  font-size: 0.78rem; font-weight: 600;
+}
+.sp-pf-pill.pass { background: #edfaf3; color: #27ae60; }
+.sp-pf-pill.fail { background: #fdf0ef; color: #e74c3c; }
+
+.sp-conf-row {
+  display: flex; align-items: center; gap: 8px; margin-bottom: 0.6rem;
+  font-size: 0.78rem; color: #666;
+}
+.sp-conf-track {
+  flex: 1; height: 8px; background: #e8e8f0; border-radius: 4px; overflow: hidden;
+}
+.sp-conf-fill {
+  height: 100%; border-radius: 4px; transition: width 0.5s ease;
+}
+
+.sp-proba { display: flex; flex-direction: column; gap: 4px; }
+.sp-proba-row {
+  display: flex; align-items: center; gap: 8px; font-size: 0.76rem;
+}
+.sp-proba-lbl { width: 55px; color: #666; }
+.sp-proba-track {
+  flex: 1; height: 6px; background: #e8e8f0; border-radius: 3px; overflow: hidden;
+}
+.sp-proba-fill { height: 100%; border-radius: 3px; transition: width 0.5s ease; }
+.sp-proba-pct { width: 36px; text-align: right; color: #888; }
+
+/* ── Raw data ── */
+.sp-raw-grid {
+  display: flex; flex-direction: column; gap: 2px;
+  max-height: 320px; overflow-y: auto;
+}
+.sp-raw-row {
+  display: flex; justify-content: space-between;
+  padding: 5px 8px; border-radius: 6px; font-size: 0.78rem;
+}
+.sp-raw-row:nth-child(odd) { background: #f9f9fb; }
+.sp-raw-key { color: #888; text-transform: capitalize; }
+.sp-raw-val { color: #08060d; font-weight: 500; }
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .sp-page { padding: 1rem; }
+  .sp-body { grid-template-columns: 1fr; }
+  .sp-hero { flex-wrap: wrap; }
+  .sp-risk-badge { width: 100%; }
+}

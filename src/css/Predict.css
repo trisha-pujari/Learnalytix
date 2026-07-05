@@ -1,0 +1,214 @@
+/* src/css/Predict.css */
+
+.predict-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.predict-page h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin: 0 0 0.25rem;
+  color: #1a1a2e;
+}
+
+.subtitle {
+  color: #666;
+  font-size: 0.9rem;
+  margin: 0 0 2rem;
+}
+
+/* ── Form ─────────────────────────────────────────────────────────────── */
+
+.predict-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-section {
+  background: #f9f9fc;
+  border: 1px solid #e8e8f0;
+  border-radius: 10px;
+  padding: 1.25rem 1.5rem;
+}
+
+.form-section h3 {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #5b5b8a;
+  margin: 0 0 1rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.form-row:last-child {
+  margin-bottom: 0;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #444;
+  gap: 5px;
+}
+
+input, select {
+  padding: 8px 10px;
+  border: 1px solid #d0d0e0;
+  border-radius: 6px;
+  font-size: 0.88rem;
+  background: #fff;
+  color: #1a1a2e;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+input:focus, select:focus {
+  border-color: #5b5b8a;
+}
+
+.checkbox-label {
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  padding-top: 1.25rem;
+}
+
+.checkbox-label input {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+/* ── Button ───────────────────────────────────────────────────────────── */
+
+.predict-btn {
+  align-self: flex-start;
+  background: #3d3d8f;
+  color: #fff;
+  border: none;
+  padding: 0.65rem 2rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.predict-btn:hover:not(:disabled) {
+  background: #2e2e70;
+}
+
+.predict-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.error-msg {
+  color: #c0392b;
+  background: #fdf0ef;
+  border: 1px solid #f5c6c2;
+  border-radius: 6px;
+  padding: 0.6rem 1rem;
+  font-size: 0.88rem;
+}
+
+/* ── Results Card ─────────────────────────────────────────────────────── */
+
+.results-card {
+  margin-top: 2rem;
+  background: #fff;
+  border: 1px solid #e0e0f0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+
+.results-card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1a1a2e;
+  margin: 0 0 1.25rem;
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+@media (max-width: 600px) {
+  .results-grid { grid-template-columns: 1fr; }
+}
+
+.result-item {
+  background: #f5f5fb;
+  border-radius: 10px;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.result-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #888;
+  font-weight: 600;
+}
+
+.result-value {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.result-conf {
+  font-size: 0.8rem;
+  color: #777;
+  margin-bottom: 0.75rem;
+}
+
+/* ── Probability bars ─────────────────────────────────────────────────── */
+
+.proba-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.proba-row {
+  display: grid;
+  grid-template-columns: 60px 1fr 40px;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.78rem;
+  color: #555;
+}
+
+.bar-track {
+  background: #e2e2ec;
+  border-radius: 4px;
+  height: 8px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.5s ease;
+}
